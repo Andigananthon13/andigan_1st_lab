@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+/*==========BACKGROUND==============*/
+body {
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/model.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/*==========HEAD==============*/
+.b-header {
+    height: 2.2em;
+    background: linear-gradient(90deg, rgba(104, 102, 133, 1) 0%, rgba(111, 111, 193, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.angel-logo img {
+    height: 50px;
+    float: left;
+    border-radius: 50px;
+    display: inline;
+}
+
+h1 {
+    padding: 1em 0em;
+    float: left;
+    font-size: medium;
+    color: rgb(224, 249, 254);
+    text-decoration: none;
+}
+
+/*=============NAVIGATION================*/
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 15px 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.links a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.links a::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background: rgb(214, 217, 219);
+    display: block;
+    opacity: 0;
+    transition: all 0.7s;
+    pointer-events: none;
+}
+
+.links a:hover::after {
+    opacity: 1;
+}
+
+.links li,
+h1 {
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .links ul {
+        list-style: none;
+        padding-left: 6em;
+        display: inline;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        padding: 2px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .links ul li a {
+        padding-top: 3em;
+        font-size: 50%;
+    }
+
+}
+
+/*=============ARAT PADAGAT==============*/
+.greetings h2 {
+    background-image: url(../images/gif.gif);
+    background-repeat: no-repeat;
+    background-position: 35%;
+    background-size: 175px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 50px;
+    letter-spacing: -1.2px;
+    word-spacing: 2.2px;
+    color: #ffffff;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+    font-weight: bolder;
+    padding-left: 2em;
+}
+
+@media (max-width: 600px) {
+    .greetings h2 {
+        display: none;
+    }
+
+}
+
+/*================SHADOW==============*/
+.shadow {
+    margin-top: 2em;
+    height: 1px;
+    margin-left: 3em;
+    margin-right: auto;
+    width: 70%;
+    box-shadow: 3px 3px 10px 5px black;
+    display: block;
+}
+
+/*=============RAIN&ANGEL-BEACH-RESORT================*/
+h3 {
+    padding-top: 0.3em;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 60px;
+    letter-spacing: -1.2px;
+    word-spacing: 2.2px;
+    color: #8cb992;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: normal;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/*=================CARDS===================*/
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding-top: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    height: 300px;
+    margin: 25px;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 14px;
+    overflow: hidden;
+    display: inline;
+
+}
+
+.card img {
+    height: 300px;
+    width: 300px;
+    border-radius: 14px;
+    transition: .5s;
+    display: flex;
+}
+
+.intro {
+    height: 30px;
+    width: 300px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgba(27, 27, 27, .5);
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.intro h1 {
+    padding: 0;
+    font-size: larger;
+}
+
+.intro p {
+    font-size: small;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card:hover h1 {
+    font-size: 0;
+    opacity: 0;
+}
+
+.card:hover .intro {
+    height: 50px;
+    background: black;
+}
+
+.card:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+/*===============ANIMATION=================*/
+.container,
+.greetings h2 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.7s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+main {
+    height: 5em;
+}
+
+/*================CONTACT================*/
+.info {
+    height: 20px;
+    padding-top: 1.5em;
+}
+
+.info ul {
+    text-align: center;
+}
+
+.info li {
+    padding-right: 2em;
+    list-style-type: none;
+}
+
+.info img {
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    padding-top: 0.7em;
+    border-radius: 10px;
+}
+
+/*================WRAPPER================*/
+.wrapper {
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background: linear-gradient(135deg, #71b7e6, transparent, #9b59b6, transparent);
+    min-width: 400px;
+    max-width: 2048px;
+    box-shadow: 3px 3px 10px 5px black;
+}
+
+.wrapper2 {
+    margin-top: 1em;
+    margin-bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background: linear-gradient(135deg, #71b7e6, transparent, #9b59b6, transparent);
+    min-width: 400px;
+    max-width: 2048px;
+    box-shadow: 3px 3px 10px 5px rgb(47, 47, 47);
+}
+
+.wrapper3 {
+    margin-top: 1em;
+    ;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background: linear-gradient(135deg, #71b7e6, transparent, #9b59b6, transparent);
+    min-width: 400px;
+    max-width: 2048px;
+    box-shadow: 3px 3px 10px 5px rgb(47, 47, 47);
+}
+
+/*=====================RESERVATION=====================*/
+
+.img-resv img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    height: 300px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/*====================ABOUT-US====================*/
+
+.abt-us p {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 19px;
+    letter-spacing: -0.6px;
+    word-spacing: 2px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    padding: 1em;
+}
+
+/*=====================FORM====================*/
+.form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+    width: 75%;
+    height: 500px;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.form .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(#71b7e6, #9b59b6);
+}
+
+.form form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box details {
+    display: block;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px #ccc solid;
+    padding-left: 15px;
+    font-size: 12px;
+    border-bottom-width: 2px;
+    transition: all 0.3 ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #9b59b6
+}
+
+form input[type="radio"] {
+    display: none
+}
+
+form .button {
+    height: 45px;
+    margin: 30px 0;
+    padding-bottom: 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    background: linear-gradient(#71b7e6, #9b59b6);
+}
+form .button2 {
+    height: 45px;
+    margin: 30px 0;
+    padding-bottom: 0;
+}
+form .button2 input {
+    height: 100%;
+    width: 100%;
+    color: #000000;
+}
+
+/*================VIDEOS================*/
+.vid video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 5px black;
+}
+
+.vid img {
+    margin-left: 4em;
+    height: 500px;
+    width: 90%;
+    box-shadow: 3px 3px 10px 5px black;
+}
+
+/*================ROOMRATES================*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hotel-head {
+    text-align: center;
+    color: #333;
+    padding: 0.5em;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
